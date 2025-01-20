@@ -1,4 +1,6 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# editei na mao este arquivo pois não subia/upload acho q devido algum atributo do arquivo (tipo hidden, mas nao estava hidden, estranho, fica para entender depois) 
+# aih fiz copy/paste manual
 
 # dependencies
 /node_modules
