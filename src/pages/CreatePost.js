@@ -28,7 +28,7 @@ function CreatePost() {
 
   const onSubmit = (data) => { //username é enviado pelo server
     axios
-      .post("http://localhost:3001/posts", data, {
+      .post("https://fullstackreact-posts-server.netlify.app/posts", data, {
         headers: { accessToken: localStorage.getItem("accessToken") },
       })
       .then((response) => {

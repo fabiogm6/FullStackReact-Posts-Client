@@ -7,10 +7,15 @@ function ChangePassword() {
     const [newPassword, setNewPassword] = useState("");
     const navigate = useNavigate();
 
+    /* coloquei espaço no http para nao trocar esta anotação
+     local: h ttp://localhost:3001/   
+    server: h ttps://fullstackreact-posts-server.netlify.app/
+    */
+
     const changePassword = () => {
         axios
             .put(
-                "http://localhost:3001/auth/changepassword",
+                "https://fullstackreact-posts-server.netlify.app/auth/changepassword",
                 {
                     oldPassword: oldPassword,
                     newPassword: newPassword,
