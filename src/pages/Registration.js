@@ -16,7 +16,9 @@ function Registration() {
 
     const onSubmit = (data) => {
         axios.post("https://fullstackreact-posts-server.netlify.app/auth", data).then(() => {
+            console.log("============= client Registration.js")
             console.log(data);
+            console.log("=============")
         });
     };
 
