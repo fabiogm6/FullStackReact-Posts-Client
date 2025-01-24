@@ -41,7 +41,7 @@ function CreatePost() {
   return (
 
     <div className="createPostPage1">
-      <h1>Cadastre-se</h1>
+      <h1>Post a 'Post'</h1>
       <Formik
         initialValues={initialValues}
         onSubmit={onSubmit}
