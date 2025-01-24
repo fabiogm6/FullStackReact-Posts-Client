@@ -12,11 +12,11 @@ function Profile() {
     const { authState } = useContext(AuthContext);
 
     useEffect(() => {
-        axios.get(`https://fullstackreact-posts-server.netlify.app/auth/basicinfo/${id}`).then((response) => {
+        axios.get(`https://fullstackreact-posts-server.onrender.com/auth/basicinfo/${id}`).then((response) => {
             setUsername(response.data.username);
         });
 
-        axios.get(`https://fullstackreact-posts-server.netlify.app/posts/byuserId/${id}`).then((response) => {
+        axios.get(`https://fullstackreact-posts-server.onrender.com/posts/byuserId/${id}`).then((response) => {
             setListOfPosts(response.data);
         });
     }, []);

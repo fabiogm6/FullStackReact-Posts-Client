@@ -14,14 +14,14 @@ function Post() {
 
     useEffect(() => {
         /*
-        let t = `https://fullstackreact-posts-server.netlify.app/posts/byId/${id}`;
+        let t = `https://fullstackreact-posts-server.onrender.com/posts/byId/${id}`;
         console.log("Post.js client passei" + t);
         */
-        axios.get(`https://fullstackreact-posts-server.netlify.app/posts/byId/${id}`).then((response) => {
+        axios.get(`https://fullstackreact-posts-server.onrender.com/posts/byId/${id}`).then((response) => {
             setPostObject(response.data);
         });
 
-        axios.get(`https://fullstackreact-posts-server.netlify.app/comments/${id}`).then((response) => {
+        axios.get(`https://fullstackreact-posts-server.onrender.com/comments/${id}`).then((response) => {
             setComments(response.data);
         });
     }, []); //UseEffect se deixar sem o array [] vai ficar rodando sem fim
@@ -29,7 +29,7 @@ function Post() {
     const addComment = () => {
         axios
             .post(
-                "https://fullstackreact-posts-server.netlify.app/comments",
+                "https://fullstackreact-posts-server.onrender.com/comments",
                 {
                     commentBody: newComment,
                     PostId: id,
@@ -56,7 +56,7 @@ function Post() {
 
     const deleteComment = (id) => {
         axios
-            .delete(`https://fullstackreact-posts-server.netlify.app/comments/${id}`, {
+            .delete(`https://fullstackreact-posts-server.onrender.com/comments/${id}`, {
                 headers: { accessToken: localStorage.getItem("accessToken") },
             })
             .then((response) => {
@@ -75,7 +75,7 @@ function Post() {
 
     const deletePost = (id) => {
         axios
-            .delete(`https://fullstackreact-posts-server.netlify.app/posts/${id}`, {
+            .delete(`https://fullstackreact-posts-server.onrender.com/posts/${id}`, {
                 headers: { accessToken: localStorage.getItem("accessToken") },
             })
             .then(() => {
@@ -87,7 +87,7 @@ function Post() {
     const editPost = (option) => {
         if (option === "title") {
             let newTitle = prompt("Enter New Title:")
-            axios.put("https://fullstackreact-posts-server.netlify.app/posts/title",
+            axios.put("https://fullstackreact-posts-server.onrender.com/posts/title",
                 {
                     newTitle: newTitle,
                     id: id,
@@ -99,7 +99,7 @@ function Post() {
             setPostObject({ ...postObject, title: newTitle });
         } else {
             let newPostText = prompt("Enter New Text:");
-            axios.put("https://fullstackreact-posts-server.netlify.app/posts/postText",
+            axios.put("https://fullstackreact-posts-server.onrender.com/posts/postText",
                 {
                     newText: newPostText,
                     id: id,

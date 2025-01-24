@@ -9,13 +9,14 @@ function ChangePassword() {
 
     /* coloquei espaço no http para nao trocar esta anotação
      local: h ttp://localhost:3001/   
-    server: h ttps://fullstackreact-posts-server.netlify.app/
+    server: h ttps://fullstackreact-posts-server.onrender.com/
+    server:h ttps://fullstackreact-posts-server.onrender.com
     */
 
     const changePassword = () => {
         axios
             .put(
-                "https://fullstackreact-posts-server.netlify.app/auth/changepassword",
+                "https://fullstackreact-posts-server.onrender.com/auth/changepassword",
                 {
                     oldPassword: oldPassword,
                     newPassword: newPassword,

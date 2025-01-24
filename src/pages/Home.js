@@ -19,7 +19,7 @@ function Home() {
       navigate("/login");
     } else {
       axios
-        .get("https://fullstackreact-posts-server.netlify.app/posts", {
+        .get("https://fullstackreact-posts-server.onrender.com/posts", {
           headers: { accessToken: localStorage.getItem("accessToken") },
         })
         .then((response) => {
@@ -37,7 +37,7 @@ function Home() {
   const likeAPost = (postId) => {
     axios
       .post(
-        "https://fullstackreact-posts-server.netlify.app/likes",
+        "https://fullstackreact-posts-server.onrender.com/likes",
         { PostId: postId },
         { headers: { accessToken: localStorage.getItem("accessToken") } }
       )

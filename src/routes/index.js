@@ -21,7 +21,7 @@ function RoutesApp() {
 
     useEffect(() => {
         axios
-            .get("https://fullstackreact-posts-server.netlify.app/auth/auth", {
+            .get("https://fullstackreact-posts-server.onrender.com/auth/auth", {
                 headers: {
                     accessToken: localStorage.getItem("accessToken"),
                 },
